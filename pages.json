@@ -1,0 +1,121 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
+		{
+		    "path" : "pages/wode/wode",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "我的",
+		        "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+		    }
+		    
+		},
+		{
+		    "path" : "pages/my/my",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "我的",
+		        "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+		    }
+		     
+		},
+		{
+		    "path" : "pages/jie-ming/jie-ming",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "解名",
+		        "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+		    }
+		    
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "起名",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+		    "path" : "pages/name-detail/name-detail",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "名字详解",
+		        "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+		    }
+		    
+		},
+		
+		{
+		    "path" : "pages/my-likes/my-likes",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "我的收藏",
+		        "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+		    }
+		    
+		},
+		
+		
+		{
+		    "path" : "pages/detail/detail",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "名字详解",
+		        "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+		    }
+		    
+		},
+		
+		{
+		    "path" : "pages/name-list/name-list",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "列表",
+		        "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+				
+				
+				
+		    }
+		    
+		}
+		
+        
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#000",
+		"selectedColor": "#5590EA",
+		"borderStyle": "black",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "./static/imgs/bagua.png",
+				"selectedIconPath": "static/imgs/bagua-select.png",
+				"text": "首页"
+			},
+			{
+					"pagePath": "pages/jie-ming/jie-ming",
+					"iconPath": "./static/imgs/fish.png",
+					"selectedIconPath": "static/imgs/fish-select.png",
+					"text": "解名"
+				},
+				{
+						"pagePath": "pages/wode/wode",
+						"iconPath": "./static/imgs/my.png",
+						"selectedIconPath": "static/imgs/my-select.png",
+						"text": "我的"
+					}
+			]
+		}		
+}

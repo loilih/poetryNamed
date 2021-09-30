@@ -1,0 +1,1 @@
+<view class="name-detail-head"><view class="name-detail-head-left"><text>{{dataList.name}}</text><text>{{dataList.content}}</text><text>{{'评分:'+dataList.sanCaiWuGe.totalSore}}</text></view></view>

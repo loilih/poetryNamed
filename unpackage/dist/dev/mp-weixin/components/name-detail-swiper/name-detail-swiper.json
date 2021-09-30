@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "name-detail-poetry": "/components/name-detail-poetry/name-detail-poetry",
+    "name-detail-sancai": "/components/name-detail-sancai/name-detail-sancai"
+  },
+  "component": true
+}

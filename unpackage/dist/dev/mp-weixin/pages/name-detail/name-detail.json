@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "名字详解",
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-nav-bar": "/uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar",
+    "name-detail-head": "/components/name-detail-head/name-detail-head",
+    "name-detail-tab": "/components/name-detail-tab/name-detail-tab",
+    "name-detail-swiper": "/components/name-detail-swiper/name-detail-swiper"
+  }
+}

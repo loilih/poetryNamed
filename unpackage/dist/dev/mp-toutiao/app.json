@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/wode/wode",
+    "pages/my/my",
+    "pages/jie-ming/jie-ming",
+    "pages/index/index",
+    "pages/name-detail/name-detail",
+    "pages/my-likes/my-likes",
+    "pages/detail/detail",
+    "pages/name-list/name-list"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#5590EA",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./static/imgs/bagua.png",
+        "selectedIconPath": "static/imgs/bagua-select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/jie-ming/jie-ming",
+        "iconPath": "./static/imgs/fish.png",
+        "selectedIconPath": "static/imgs/fish-select.png",
+        "text": "解名"
+      },
+      {
+        "pagePath": "pages/wode/wode",
+        "iconPath": "./static/imgs/my.png",
+        "selectedIconPath": "static/imgs/my-select.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
