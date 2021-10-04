@@ -3,6 +3,9 @@
 		<view class="nav-bar">
 			<uni-nav-bar title="收藏列表" statusBar="true" leftIcon="back" @clickLeft="goBack"></uni-nav-bar>
 		</view>
+		<view class="null" v-show="isNull">
+			(空)
+		</view>
 		<view class="scroll">
 			<scroll-view scroll-y="true"  class="scroll-list">
 				
@@ -21,7 +24,8 @@
 	export default {
 		data() {
 			return {
-				likes:[]
+				likes:[],
+				isNull:false,
 			}
 		},
 		onLoad() {
@@ -42,7 +46,7 @@
 				.then(res=>{
 					uni.hideLoading()
 					this.likes = res.result.data
-					console.log(res)
+					if(this.likes.length === 0) this.isNull = true
 				})
 				.catch(err=>{
 					uni.showToast({
@@ -79,6 +83,12 @@
 		display: flex;
 		flex-direction: column;
 		flex: 1;
+		.null{
+			text-align: center;
+			margin: 20rpx auto;
+			font-size: 35rpx;
+			color: #d9d9d9;
+		}
 		.scroll{
 			flex: 1;
 			overflow: hidden;
@@ -87,6 +97,7 @@
 				height: 100%;
 				display: flex;
 				flex-direction: column;
+				
 				.likes-item{
 					position: relative;
 					box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

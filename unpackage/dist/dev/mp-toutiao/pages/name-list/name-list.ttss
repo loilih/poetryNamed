@@ -48,7 +48,7 @@ page {
 }
 .name-list .scroll .scroll-list .list-item {
   position: relative;
-  padding: 30px;
+  padding: 20px;
   margin: 20rpx;
   border-radius: 20rpx;
   color: #fff;

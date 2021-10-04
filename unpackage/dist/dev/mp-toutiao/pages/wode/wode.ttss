@@ -49,15 +49,15 @@
   font-weight: bold;
   margin-right: 10rpx;
 }
-.wode-content .wode-content-item .wode-content-item-left button {
+.wode-content .wode-content-item .wode-content-item-right button {
   outline: none;
   display: inline;
   background-color: #fff;
   font-size: 30rpx;
-  padding: 0;
-  margin: 0;
+  padding: 5rpx 20rpx;
 }
-.wode-content .wode-content-item .wode-content-item-left button::after {
-  border: none;
+.wode-content .wode-content-item .wode-content-item-right button::after {
+  border-radius: 50rpx;
+  border: 2px solid #007AFF;
 }
 

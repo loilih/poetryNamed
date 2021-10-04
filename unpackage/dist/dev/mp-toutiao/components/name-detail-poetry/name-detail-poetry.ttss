@@ -41,6 +41,13 @@
 .name-detail-poetry .scroll .poetry-text {
   text-align: center;
 }
+.name-detail-poetry .scroll .poetry-text text:nth-child(1) {
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.name-detail-poetry .scroll .poetry-text text:nth-child(2) {
+  color: #ddd;
+}
 .name-detail-poetry .scroll .poetry-tanslation {
   margin: 20rpx;
 }

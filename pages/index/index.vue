@@ -51,6 +51,7 @@
 					<input class="uni-input" type="text" name="firstName" placeholder="请输入小主姓氏" value="李"/>
 					<text class="iconfont icon-icon1" ></text>
 				</view>
+				
 				<button type="primary" form-type="submit">开始起名</button>
 
 			</form>
@@ -82,7 +83,9 @@
 		
 		onLoad() {
 				this.login()
-				console.log(uni.getStorageSync('uid'))
+				uni.showShareMenu({
+					
+				})
 		},
 		
 		methods: {
@@ -153,7 +156,7 @@
 					// #ifdef MP-WEIXIN
 						provider: 'weixin',
 						success: (res) => {
-							console.log(res.code)
+							
 							uniCloud.callFunction({
 									name: 'wx_code2Session',
 									data: {

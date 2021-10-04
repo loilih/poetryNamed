@@ -59,7 +59,7 @@
 				this.wuGeLevelStyle(this.dataList.sanCaiWuGe.wuGe,this.wuGeStyle)
 				this.wuGeLevelStyle(this.dataList.sanCaiWuGe.sanCai.level,this.sanCaiLevelStyle)
 				this.sanCaiStyle()
-				console.log(this.sanCaiStyleA)
+				
 			})
 		},
 		methods:{

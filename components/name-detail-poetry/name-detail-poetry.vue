@@ -60,6 +60,13 @@
 			}
 			.poetry-text{
 				text-align: center;
+				& text:nth-child(1){
+					font-weight: bold;
+					font-size: 30rpx;
+				}
+				& text:nth-child(2){
+					color: #ddd;
+				}
 			}
 			.poetry-tanslation{
 				margin: 20rpx;

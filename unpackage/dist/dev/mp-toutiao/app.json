@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/wode/wode",
     "pages/my/my",
     "pages/jie-ming/jie-ming",
-    "pages/index/index",
     "pages/name-detail/name-detail",
     "pages/my-likes/my-likes",
     "pages/detail/detail",

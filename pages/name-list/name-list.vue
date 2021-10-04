@@ -91,7 +91,7 @@
 			},
 			async getName() {
 				uni.showLoading({
-					title: '计算中,需要一点时间,请耐心等待',
+					title: '请稍等...',
 				})
 				let res = await uniCloud.callFunction({
 					name: "get_poetry",
@@ -111,30 +111,29 @@
 					
 					poetryList[key].content = content
 					poetryList[key].completeContent = completeContent
-					let content1 = content.split('，')[0]
-					let content2 = content.split('，')[1]
-					if(!content1 || !content2){
-						return
-					}
+					
+					// let content1 = content.split('，')[0]
+					// let content2 = content.split('，')[1]
+					// if(!content1 || !content2){
+					// 	return
+					// }
 					let reg = /([\u4e00-\u9fa5])+/g
-					let contentStr1 = content1.match(reg).join("")
-					let contentStr2 = content2.match(reg).join("")
+					// let contentStr1 = content1.match(reg).join("")
+					// let contentStr2 = content2.match(reg).join("")
+					// contentStr1 = contentStr1.split('')
+					// contentStr2 = contentStr2.split('')
+					let contentStr = content.match(reg).join("").split("")
+					let randomNum = this.randomNum(0,contentStr.length)
+					let firstWord = contentStr[randomNum[0]]
+					let secondWord = contentStr[randomNum[1]]
+					let randomName = firstWord + secondWord 
 					
-					
-					// contentStr1 = contentStr1.replace(/\s*/g,"")
-					contentStr1 = contentStr1.split('')
-					// contentStr2 = contentStr2.replace(/\s*/g,"")
-					contentStr2 = contentStr2.split('')
-					let randomName = ''
-
 					// for (let n = 0 ;n < 2 ; n ++) {
 					// 	randomName+=contentStr[this.Random(0,contentStr.length-1)]
 					// }
-					randomName = contentStr1[this.Random(0, contentStr1.length - 1)] + contentStr2[this
-						.Random(0, contentStr2.length - 1)]
+					// randomName = contentStr1[this.Random(0, contentStr1.length - 1)] + contentStr2[this
+					// 	.Random(0, contentStr2.length - 1)]
 					poetryList[key].name = this.formData.firstName+ randomName
-					
-					
 				}
 				return poetryList
 
@@ -143,6 +142,18 @@
 			Random(min, max) {
 				return Math.round(Math.random() * (max - min)) + min;
 			},
+			//取两个随机数 
+			randomNum(min, max) {
+				let num1 = Math.floor(Math.random() * (max - min)) + min;
+				    let num2 = Math.floor(Math.random() * (num1 - min + 1)) + min;
+				    if (num1 === num2) {
+				        num1++
+				    } else if (num1 === max) {
+				        num2--
+				    }
+				    return [num2,num1]
+				
+			},
 			async filterName(count) {
 				
 					let poetryList = await this.getName()
@@ -150,6 +161,7 @@
 					poetryList.forEach((value) => {
 						names.push(value.name)
 					})
+					
 					let res = await uniCloud.callFunction({
 						name: "get_gender",
 						data: {
@@ -216,7 +228,6 @@
 						this.poetryList = this.poetryList.slice(0, count)
 						uni.hideLoading()
 					}).catch(e => {
-						console.log(e)
 					})
 				}
 
@@ -262,7 +273,7 @@
 				flex-direction: column;
 				.list-item {
 					position: relative;
-					padding: 30px;
+					padding: 20px;
 					margin: 20rpx;
 					border-radius: 20rpx;
 					color: #fff;

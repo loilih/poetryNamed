@@ -14,19 +14,19 @@
 			<view class="wode-content-item" >
 				<view class="wode-content-item-left">
 					<uni-icons type="redo"></uni-icons>
-					<button open-type="share" type="default">分享给朋友</button>
+					<text>分享给朋友</text>
 				</view>
 				<view class="wode-content-item-right">
-					<uni-icons type="arrowright"></uni-icons>
+					<button open-type="share" type="default">分享</button>
 				</view>
 			</view>
 			<view class="wode-content-item" >
 				<view class="wode-content-item-left">
 					<uni-icons type="chat"></uni-icons>
-					<button open-type="contact" type="default">联系我</button>
+					<text>联系我</text>
 				</view>
 				<view class="wode-content-item-right">
-					<uni-icons type="arrowright"></uni-icons>
+					<button open-type="contact" type="default">联系我</button>
 				</view>
 			</view>
 		</view>
@@ -64,9 +64,7 @@
 				})
 				
 			},
-			test(){
-				console.log(1)
-			}
+			
 			
 		}
 	}
@@ -96,20 +94,23 @@
 					margin-right: 10rpx;
 					
 				}
+				
+			}
+			.wode-content-item-right{
 				button{
 					outline: none;
 					// background-color: #007AFF;
 					display: inline;
 					background-color: #fff;
 					font-size: 30rpx;
-					padding: 0;
-					margin: 0;
+					padding: 5rpx 20rpx;
+					
 					
 					
 				}
 				button::after {
-					
-					border: none
+					border-radius: 50rpx;
+					border: 2px solid #007AFF;
 				}
 			}
 			

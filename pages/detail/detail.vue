@@ -65,7 +65,7 @@
 		
 		onLoad(option) {
 			this.dataList = JSON.parse(option.data)
-			console.log(this.$refs.a)
+			
 			this.levelArray = this.getLevelArray()
 			
 		},

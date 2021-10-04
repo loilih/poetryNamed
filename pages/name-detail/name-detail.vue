@@ -24,7 +24,6 @@
 		onLoad(option) {
 			this.dataList = JSON.parse(option.data)
 			this.type = option.type
-			console.log(this.type)
 			this.sanCai = this.dataList.sanCaiWuGe.sanCai.sancai.split('')
 			if(option.type === 'qiming'){
 				this.contentArray = this.dataList.completeContent.split("。")
