@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "name-detail-poetry": "/components/name-detail-poetry/name-detail-poetry",
-    "name-detail-sancai": "/components/name-detail-sancai/name-detail-sancai"
+    "name-detail-sancai": "/components/name-detail-sancai/name-detail-sancai",
+    "birth-eight": "/components/birth-eight/birth-eight"
   },
   "component": true
 }

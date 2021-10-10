@@ -96,10 +96,10 @@ var components
 try {
   components = {
     uniNavBar: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar */ "uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar.vue */ 98))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar */ "uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar.vue */ 105))
     },
     likes: function() {
-      return __webpack_require__.e(/*! import() | components/likes/likes */ "components/likes/likes").then(__webpack_require__.bind(null, /*! @/components/likes/likes.vue */ 126))
+      return __webpack_require__.e(/*! import() | components/likes/likes */ "components/likes/likes").then(__webpack_require__.bind(null, /*! @/components/likes/likes.vue */ 140))
     }
   }
 } catch (e) {
@@ -132,6 +132,12 @@ var render = function() {
       l0: l0
     }
   })
+
+  if (!_vm._isMounted) {
+    _vm.e0 = function($event) {
+      return this.control(10)
+    }
+  }
 
   _vm.$mp.data = Object.assign(
     {},
@@ -174,7 +180,10 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni, uniCloud) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 36));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var likes = function likes() {__webpack_require__.e(/*! require.ensure | components/likes/likes */ "components/likes/likes").then((function () {return resolve(__webpack_require__(/*! ../../components/likes/likes.vue */ 126));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni, uniCloud) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 20));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var likes = function likes() {__webpack_require__.e(/*! require.ensure | components/likes/likes */ "components/likes/likes").then((function () {return resolve(__webpack_require__(/*! ../../components/likes/likes.vue */ 140));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
 
 
 
@@ -231,6 +240,7 @@ __webpack_require__.r(__webpack_exports__);
       poetryList: [],
       page: 'nameList' };
 
+
   },
   components: {
     likes: likes },
@@ -238,6 +248,9 @@ __webpack_require__.r(__webpack_exports__);
   onLoad: function onLoad(option) {
     this.formData = JSON.parse(option.formData);
     this.control(10);
+
+
+
   },
   computed: {
     highlightIndex: function highlightIndex() {
@@ -256,18 +269,22 @@ __webpack_require__.r(__webpack_exports__);
       return obj;
     } },
 
+
   methods: {
     goBack: function goBack() {
       uni.navigateBack({});
 
 
     },
-    getName: function getName() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res, poetryList, randomNameArray, key, completeContent, content, content1, content2, reg, contentStr1, contentStr2, randomName;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+    getName: function getName() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res, poetryList, randomNameArray, key, completeContent, content, reg, contentStr, randomNum, firstWord, secondWord, randomName;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
                 uni.showLoading({
-                  title: '计算中,请稍等' });_context.next = 3;return (
+                  title: '请稍等...' });_context.next = 3;return (
 
                   uniCloud.callFunction({
-                    name: "get_poetry" }));case 3:res = _context.sent;
+                    name: "get_poetry",
+                    data: {
+                      type: _this.formData.poetryType } }));case 3:res = _context.sent;
+
 
                 poetryList = res.result.data;
                 randomNameArray = [];
@@ -278,27 +295,32 @@ __webpack_require__.r(__webpack_exports__);
                     return s && s.trim();
                   });
                   content = content[_this.Random(0, content.length - 1)];
+
                   poetryList[key].content = content;
                   poetryList[key].completeContent = completeContent;
-                  content1 = content.split('，')[0];
-                  content2 = content.split('，')[1];
+
+                  // let content1 = content.split('，')[0]
+                  // let content2 = content.split('，')[1]
+                  // if(!content1 || !content2){
+                  // 	return
+                  // }
                   reg = /([\u4e00-\u9fa5])+/g;
-                  contentStr1 = content1.match(reg).join("");
-                  contentStr2 = content2.match(reg).join("");
-                  // contentStr1 = contentStr1.replace(/\s*/g,"")
-                  contentStr1 = contentStr1.split('');
-                  // contentStr2 = contentStr2.replace(/\s*/g,"")
-                  contentStr2 = contentStr2.split('');
-                  randomName = '';
+                  // let contentStr1 = content1.match(reg).join("")
+                  // let contentStr2 = content2.match(reg).join("")
+                  // contentStr1 = contentStr1.split('')
+                  // contentStr2 = contentStr2.split('')
+                  contentStr = content.match(reg).join("").split("");
+                  randomNum = _this.randomNum(0, contentStr.length);
+                  firstWord = contentStr[randomNum[0]];
+                  secondWord = contentStr[randomNum[1]];
+                  randomName = firstWord + secondWord;
 
                   // for (let n = 0 ;n < 2 ; n ++) {
                   // 	randomName+=contentStr[this.Random(0,contentStr.length-1)]
                   // }
-                  randomName = contentStr1[_this.Random(0, contentStr1.length - 1)] + contentStr2[_this.
-                  Random(0, contentStr2.length - 1)];
+                  // randomName = contentStr1[this.Random(0, contentStr1.length - 1)] + contentStr2[this
+                  // 	.Random(0, contentStr2.length - 1)]
                   poetryList[key].name = _this.formData.firstName + randomName;
-
-
                 }return _context.abrupt("return",
                 poetryList);case 8:case "end":return _context.stop();}}}, _callee);}))();
 
@@ -307,13 +329,26 @@ __webpack_require__.r(__webpack_exports__);
     Random: function Random(min, max) {
       return Math.round(Math.random() * (max - min)) + min;
     },
-    filterName: function filterName(count) {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _this2$poetryList;var poetryList, names, res, genderRes, res1, wuGe;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+    //取两个随机数 
+    randomNum: function randomNum(min, max) {
+      var num1 = Math.floor(Math.random() * (max - min)) + min;
+      var num2 = Math.floor(Math.random() * (num1 - min + 1)) + min;
+      if (num1 === num2) {
+        num1++;
+      } else if (num1 === max) {
+        num2--;
+      }
+      return [num2, num1];
+
+    },
+    filterName: function filterName(count) {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var poetryList, names, res, genderRes, res1, wuGe;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
 
                   _this2.getName());case 2:poetryList = _context2.sent;
                 names = [];
                 poetryList.forEach(function (value) {
                   names.push(value.name);
                 });_context2.next = 7;return (
+
                   uniCloud.callFunction({
                     name: "get_gender",
                     data: {
@@ -351,36 +386,38 @@ __webpack_require__.r(__webpack_exports__);
                 });
                 if (_this2.formData.score !== '不限') {
                   poetryList = poetryList.filter(function (value) {
-                    if (_this2.formData.score === '低') {
+                    if (_this2.formData.score === '中') {
                       return value.sanCaiWuGe.totalSore > 50;
                     } else if (_this2.formData.score === '高') {
                       return value.sanCaiWuGe.totalSore > 70;
                     }
                   });
                 }
-                (_this2$poetryList = _this2.poetryList).push.apply(_this2$poetryList, _toConsumableArray(poetryList));
+                // this.poetryList.push(...poetryList)
 
-                poetryList = poetryList.slice(0, count);
+                // poetryList = poetryList.slice(0, count)
+                return _context2.abrupt("return",
 
 
-
-                // return new Promise((resolve, reject) => {
-                // 	if (poetryList) {
-                // 		this.poetryList.push(...poetryList)
-                // 		resolve()
-                // 	} else {
-                // 		reject('error')
-                // 	}
-                // })
-              case 21:case "end":return _context2.stop();}}}, _callee2);}))();},
+                new Promise(function (resolve, reject) {
+                  if (poetryList) {var _this2$poetryList;
+                    (_this2$poetryList = _this2.poetryList).push.apply(_this2$poetryList, _toConsumableArray(poetryList));
+                    resolve();
+                  } else {
+                    reject('error');
+                  }
+                }));case 20:case "end":return _context2.stop();}}}, _callee2);}))();
+    },
     control: function control(count) {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:
                 _this3.poetryList = [];case 1:_context3.next = 3;return (
 
+
                   _this3.filterName().then(function (res) {
+
                     _this3.poetryList = _this3.poetryList.slice(0, count);
+                    console.log(_this3.poetryList.length);
                     uni.hideLoading();
                   }).catch(function (e) {
-                    console.log(e);
                   }));case 3:if (
 
 
@@ -389,9 +426,12 @@ __webpack_require__.r(__webpack_exports__);
 
     },
     toDetail: function toDetail(index) {
+
       var dataList = JSON.stringify(this.poetryList[index]);
+
+      var date = JSON.stringify({ date: this.formData.date, lunar: this.formData.lunar });
       uni.navigateTo({
-        url: '../name-detail/name-detail?data=' + dataList + '&type=qiming' });
+        url: '../name-detail/name-detail?data=' + dataList + '&type=qiming' + '&date=' + date });
 
     },
     toMyLikes: function toMyLikes() {
@@ -399,7 +439,7 @@ __webpack_require__.r(__webpack_exports__);
         url: '../my-likes/my-likes' });
 
     } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 35)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 19)["default"]))
 
 /***/ }),
 

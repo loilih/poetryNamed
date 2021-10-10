@@ -2,6 +2,7 @@
 	<view class="name-detail-tab">
 		<text @click="click(0)" :class="{active:tabIindex === 0}">诗歌来源</text>
 		<text @click="click(1)"  :class="{active:tabIindex === 1}">三才五格</text>
+		<text @click="click(2)"  :class="{active:tabIindex === 2}">生辰八字</text>
 	</view>
 </template>
 
@@ -24,6 +25,9 @@
 					break;
 					case 1 :
 					this.index = 1
+					break;
+					case 2 :
+					this.index = 2
 					break;
 				}
 				uni.$emit("tabClick",e)

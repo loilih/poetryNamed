@@ -96,16 +96,19 @@ var components
 try {
   components = {
     uniNavBar: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar */ "uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar.vue */ 98))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar */ "uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar.vue */ 105))
+    },
+    uniNoticeBar: function() {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar */ "uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar.vue */ 112))
     },
     nameDetailHead: function() {
-      return __webpack_require__.e(/*! import() | components/name-detail-head/name-detail-head */ "components/name-detail-head/name-detail-head").then(__webpack_require__.bind(null, /*! @/components/name-detail-head/name-detail-head.vue */ 105))
+      return __webpack_require__.e(/*! import() | components/name-detail-head/name-detail-head */ "components/name-detail-head/name-detail-head").then(__webpack_require__.bind(null, /*! @/components/name-detail-head/name-detail-head.vue */ 119))
     },
     nameDetailTab: function() {
-      return __webpack_require__.e(/*! import() | components/name-detail-tab/name-detail-tab */ "components/name-detail-tab/name-detail-tab").then(__webpack_require__.bind(null, /*! @/components/name-detail-tab/name-detail-tab.vue */ 112))
+      return __webpack_require__.e(/*! import() | components/name-detail-tab/name-detail-tab */ "components/name-detail-tab/name-detail-tab").then(__webpack_require__.bind(null, /*! @/components/name-detail-tab/name-detail-tab.vue */ 126))
     },
     nameDetailSwiper: function() {
-      return __webpack_require__.e(/*! import() | components/name-detail-swiper/name-detail-swiper */ "components/name-detail-swiper/name-detail-swiper").then(__webpack_require__.bind(null, /*! @/components/name-detail-swiper/name-detail-swiper.vue */ 119))
+      return __webpack_require__.e(/*! import() | components/name-detail-swiper/name-detail-swiper */ "components/name-detail-swiper/name-detail-swiper").then(__webpack_require__.bind(null, /*! @/components/name-detail-swiper/name-detail-swiper.vue */ 133))
     }
   }
 } catch (e) {
@@ -162,7 +165,16 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni, uniCloud) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -182,31 +194,57 @@ var _default =
       dataList: {},
       contentArray: [],
       sanCai: [],
-      type: '' };
+      type: '',
+      date: null,
+      birthEight: null };
+
 
   },
   onLoad: function onLoad(option) {
     this.dataList = JSON.parse(option.data);
+    this.date = JSON.parse(option.date);
     this.type = option.type;
-    console.log(this.type);
     this.sanCai = this.dataList.sanCaiWuGe.sanCai.sancai.split('');
     if (option.type === 'qiming') {
       this.contentArray = this.dataList.completeContent.split("。");
       this.contentArray.pop();
     }
-
-
-
-
-
+    if (this.date.date != null) {
+      this.getBirthEight();
+    }
+    console.log(this.birthEight);
   },
   methods: {
     goBack: function goBack() {
       uni.navigateBack({});
 
 
+    },
+    getBirthEight: function getBirthEight() {var _this = this;
+      uni.showLoading({
+        title: "加载中...." });
+
+      uniCloud.callFunction({
+        name: 'birth_eight',
+        data: {
+          date: this.date.date,
+          type: this.date.lunar },
+
+        success: function success(res) {
+          _this.birthEight = res.result.data;
+          console.log(_this.birthEight);
+          uni.hideLoading();
+        },
+        fail: function fail(err) {
+          uni.hideLoading();
+          uni.showToast({
+            title: err });
+
+        } });
+
+
     } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 19)["default"]))
 
 /***/ }),
 

@@ -45,7 +45,7 @@
 	.name-detail-poetry{
 		
 		.scroll{
-			height: calc(100vh - 650rpx);
+			height: calc(100vh - 730rpx);
 			overflow: hidden;
 			box-sizing: border-box;
 			

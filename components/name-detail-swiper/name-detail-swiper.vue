@@ -3,12 +3,18 @@
 		<swiper :current="swiperIndex" class="swiper" @change="swiperChange">
 			<swiper-item>
 				<view class="swiper-item">
-					<name-detail-poetry :dataList="dataList" :contentArray="contentArray" :type = "type"></name-detail-poetry>
+					<name-detail-poetry :dataList="dataList" :contentArray="contentArray" :type="type">
+					</name-detail-poetry>
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="swiper-item">
 					<name-detail-sancai :dataList="dataList" :sanCai="sanCai"></name-detail-sancai>
+				</view>
+			</swiper-item>
+			<swiper-item>
+				<view class="swiper-item">
+					<birth-eight :birthEight="birthEight" v-if="birthEight!=null"></birth-eight>
 				</view>
 			</swiper-item>
 		</swiper>
@@ -18,7 +24,7 @@
 <script>
 	export default {
 		name: "name-detail-swiper",
-		props: ['dataList', 'contentArray', 'sanCai', 'type'],
+		props: ['dataList', 'contentArray', 'sanCai', 'type', 'birthEight'],
 		data() {
 			return {
 				swiperIndex: 0
@@ -57,7 +63,7 @@
 		flex: 1;
 
 		.swiper {
-			height: calc(100vh - 650rpx);
+			height: calc(100vh - 750rpx);
 		}
 	}
 </style>

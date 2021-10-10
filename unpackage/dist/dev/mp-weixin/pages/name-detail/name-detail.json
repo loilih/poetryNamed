@@ -4,6 +4,7 @@
   "navigationStyle": "custom",
   "usingComponents": {
     "uni-nav-bar": "/uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar",
+    "uni-notice-bar": "/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar",
     "name-detail-head": "/components/name-detail-head/name-detail-head",
     "name-detail-tab": "/components/name-detail-tab/name-detail-tab",
     "name-detail-swiper": "/components/name-detail-swiper/name-detail-swiper"

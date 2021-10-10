@@ -34,6 +34,12 @@ page {
   flex-direction: column;
   flex: 1;
 }
+.my-likes .null {
+  text-align: center;
+  margin: 20rpx auto;
+  font-size: 35rpx;
+  color: #d9d9d9;
+}
 .my-likes .scroll {
   flex: 1;
   overflow: hidden;

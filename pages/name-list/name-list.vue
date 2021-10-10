@@ -1,9 +1,12 @@
 <template>
 	<view class="name-list">
+		
 		<view class="nav-bar">
-			<uni-nav-bar title="列表" statusBar="true" leftIcon="back" @clickLeft="goBack"></uni-nav-bar>
+			<uni-nav-bar title="列表" statusBar="true" leftIcon="back" @clickLeft="goBack" ></uni-nav-bar>
 		</view>
+		
 		<view class="scroll" >
+			<!-- <circle :p="p"></circle> -->
 			<scroll-view scroll-y class="scroll-list" >
 				<view >
 					
@@ -53,7 +56,8 @@
 			return {
 				formData: {},
 				poetryList: [],
-				page:'nameList'
+				page:'nameList',
+				
 			}
 		},
 		components:{
@@ -81,7 +85,8 @@
 
 				})
 				return obj
-			}
+			},
+			
 		},
 		methods: {
 			goBack() {
@@ -206,26 +211,29 @@
 							}
 						})
 					}
-					this.poetryList.push(...poetryList)
+					// this.poetryList.push(...poetryList)
 					
-					poetryList = poetryList.slice(0, count)
+					// poetryList = poetryList.slice(0, count)
 					
 				
 				
-				// return new Promise((resolve, reject) => {
-				// 	if (poetryList) {
-				// 		this.poetryList.push(...poetryList)
-				// 		resolve()
-				// 	} else {
-				// 		reject('error')
-				// 	}
-				// })
+				return new Promise((resolve, reject) => {
+					if (poetryList) {
+						this.poetryList.push(...poetryList)
+						resolve()
+					} else {
+						reject('error')
+					}
+				})
 			},
 			async control(count) {
 				this.poetryList = []
 				do {
+					
 					await this.filterName().then(res => {
+						
 						this.poetryList = this.poetryList.slice(0, count)
+						console.log(this.poetryList.length)
 						uni.hideLoading()
 					}).catch(e => {
 					})
@@ -236,9 +244,12 @@
 
 			},
 			toDetail(index){
+				
 				let dataList = JSON.stringify(this.poetryList[index])
+				
+				let date =JSON.stringify ({date:this.formData.date,lunar:this.formData.lunar})
 				uni.navigateTo({
-					url:'../name-detail/name-detail?data='+dataList+'&type=qiming'
+					url:'../name-detail/name-detail?data='+dataList+'&type=qiming' + '&date=' + date
 				})
 			},
 			toMyLikes(){
@@ -255,6 +266,7 @@
 	page {
 		height: 100%;
 		display: flex;
+		box-sizing: border-box;
 	}
 
 	.name-list {
@@ -285,7 +297,6 @@
 					.list-footer {
 						display: flex;
 						justify-content: space-between;
-						
 					}
 
 					.list-middle {
@@ -305,7 +316,6 @@
 							font-weight: bold;
 							font-size: 40rpx;
 							color: #eea2a4;
-
 						}
 					}
 
@@ -319,19 +329,28 @@
 			}
 		}
 		.footer{
+			padding: 0 10rpx;
 			display: flex;
 			width: 100%;
 			height: 80rpx;
 			position: fixed;
-			bottom: 0;
+			bottom: 10rpx;
+			box-sizing: border-box;
 			// background-color: #FFFFFF;
 			align-items: center;
+			
 			button{
 				flex: 1;
 				margin-left: 10rpx;
 				height: 80%;
-				background-color: #fff;
-				color: #000;	
+				background: none;
+				color: #fff;
+				text-align: center;
+				
+			}
+			button::after {
+				border-radius: 50rpx;
+				border: 2px solid #fff;
 			}
 			
 		}

@@ -1,6 +1,6 @@
 <template>
 	<view class="jie-ming">
-		<page-head title = '解名'></page-head>
+		<page-head title='解名'></page-head>
 		<view class="jie-ming-content">
 			<view class="jie-ming-form">
 				<form @submit="submitForm">
@@ -8,9 +8,10 @@
 						<view class="title">
 							姓名:
 						</view>
-						<input class="uni-input" type="text" name="name" placeholder="请输入姓名" value="李梅"/>
-						<text class="iconfont icon-icon1" ></text>
+						<input class="uni-input" type="text" name="name" placeholder="请输入姓名"  />
+						<text class="iconfont icon-icon1"></text>
 					</view>
+					<date-select @dateChange="dateChange"></date-select>
 					<button type="primary" form-type="submit">开始解名</button>
 				</form>
 			</view>
@@ -23,57 +24,78 @@
 	export default {
 		data() {
 			return {
-				formData:{
-					name:''
+				formData: {
+					name: ''
 				},
 			}
 		},
 		methods: {
-			submitForm(e){
+			submitForm(e) {
 				this.formData.name = e.detail.value.name
-				let rule = [
-				    {name:"name", checkType : "string", checkRule:"2,4",  errorMsg:"姓名应为2-4个字符"},
-				    {name:"name", checkType : "reg", checkRule:"^[\u4e00-\u9fa5]+$",  errorMsg:"姓名必须为汉字"},
+				let rule = [{
+						name: "name",
+						checkType: "string",
+						checkRule: "2,4",
+						errorMsg: "姓名应为2-4个字符"
+					},
+					{
+						name: "name",
+						checkType: "reg",
+						checkRule: "^[\u4e00-\u9fa5]+$",
+						errorMsg: "姓名必须为汉字"
+					},
 				];
 				var checkRes = graceChecker.check(this.formData, rule);
-				if(checkRes){
+				if (checkRes) {
 					uni.showLoading({
-						title:'解名中,请稍等...'
+						title: '解名中,请稍等...'
 					})
 					let names = []
 					names.push(this.formData.name)
 					uniCloud.callFunction({
-						name:'wuge',
-						data:{names:names}
-					}).then(res=>{
+						name: 'wuge',
+						data: {
+							names: names
+						}
+					}).then(res => {
 						uni.hideLoading()
-						let dataList ={}
-						
+						let dataList = {}
+
 						dataList.sanCaiWuGe = res.result.data[0]
 						dataList.name = this.formData.name
 						dataList = JSON.stringify(dataList)
+						let date =JSON.stringify ({date:this.formData.date,lunar:this.formData.lunar})
 						uni.navigateTo({
-							url:'../name-detail/name-detail?data='+dataList + '&type=jieming'
+							url: '../name-detail/name-detail?data=' + dataList + '&type=jieming' +  '&date=' + date
 						})
-						
-					}).catch(err=>{
+
+					}).catch(err => {
 						uni.showModal({
-							title:'出现了点小错误,请重试'
+							title: '出现了点小错误,请重试'
 						})
 					})
-					
-				}else{
-				    uni.showToast({ title: graceChecker.error, icon: "none" });
+
+				} else {
+					uni.showToast({
+						title: graceChecker.error,
+						icon: "none"
+					});
 				}
-				
-				
+
+
 			},
+
+			dateChange(d) {
+				this.formData.date = d.date;
+				this.formData.lunar = d.lunar
+			}
+
 		}
 	}
 </script>
 
 <style lang="scss">
-	.jie-ming-content{
+	.jie-ming-content {
 		padding: 30rpx;
 		display: flex;
 		flex-direction: column;
@@ -82,11 +104,13 @@
 		margin: 0 20rpx;
 		position: relative;
 		top: -50rpx;
-		.form-item{
-			text{
+
+		.form-item {
+			text {
 				margin-left: 10rpx;
 				padding: 15rpx;
 			}
+
 			display:flex;
 			justify-content: space-between;
 			align-items: center;
@@ -96,15 +120,17 @@
 			border-bottom: 1px solid #ddd;
 			text-align: right;
 		}
+
 		.uni-input {
 			height: 50rpx;
 			padding: 15rpx 25rpx;
-			line-height:50rpx;
-			font-size:28rpx;
-			background:#FFF;
+			line-height: 50rpx;
+			font-size: 28rpx;
+			background: #FFF;
 			flex: 1;
 		}
-		button{
+
+		button {
 			background-color: $bace-color;
 			width: 60%;
 			margin-top: 30rpx;

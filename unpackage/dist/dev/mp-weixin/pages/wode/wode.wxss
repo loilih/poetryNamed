@@ -41,9 +41,23 @@
   justify-content: space-between;
   border-bottom: 1px solid #ddd;
 }
+.wode-content .wode-content-item .wode-content-item-left {
+  flex: 1;
+}
 .wode-content .wode-content-item .wode-content-item-left text:nth-child(1) {
   font-size: 30rpx;
   font-weight: bold;
   margin-right: 10rpx;
+}
+.wode-content .wode-content-item .wode-content-item-right button {
+  outline: none;
+  display: inline;
+  background-color: #fff;
+  font-size: 30rpx;
+  padding: 5rpx 20rpx;
+}
+.wode-content .wode-content-item .wode-content-item-right button::after {
+  border-radius: 50rpx;
+  border: 2px solid #007AFF;
 }
 
