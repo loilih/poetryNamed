@@ -57,6 +57,7 @@ page {
   font-size: 30rpx;
 }
 .name-list .scroll .scroll-list .list-item .list-head,
+.name-list .scroll .scroll-list .list-item .list-middle,
 .name-list .scroll .scroll-list .list-item .list-footer {
   display: flex;
   justify-content: space-between;
@@ -67,6 +68,12 @@ page {
 .name-list .scroll .scroll-list .list-item .list-middle text.highlight {
   font-size: 35rpx;
   color: #FF4500;
+}
+.name-list .scroll .scroll-list .list-item .list-middle .list-middle-right {
+  color: #ddd;
+  padding: 0 20rpx;
+  border: 1px solid #fff;
+  border-radius: 30rpx;
 }
 .name-list .scroll .scroll-list .list-item .list-head text:first-child {
   font-weight: bold;
@@ -93,6 +100,9 @@ page {
   background: none;
   color: #fff;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .name-list .footer button::after {
   border-radius: 50rpx;

@@ -17,15 +17,19 @@
 							<text>{{'评分:'+item.sanCaiWuGe.totalSore}}</text>
 						</view>
 						<view class="list-middle">
-
-							<!-- <text>{{'「'+item.content+'」'}}</text> -->
-							<text>「</text>
-							<text v-for="(word,n) in poetryList[index].content.split('')" :key="n"
-								:class="{highlight: n == highlightIndex[index].f || n == highlightIndex[index].s}">
-								{{word}}
-								
-							</text>
-							<text>」</text>
+							<view class="list-middle-left">
+								<!-- <text>{{'「'+item.content+'」'}}</text> -->
+								<text>「</text>
+								<text v-for="(word,n) in poetryList[index].content.split('')" :key="n"
+									:class="{highlight: n == highlightIndex[index].f || n == highlightIndex[index].s}">
+									{{word}}
+									
+								</text>
+								<text>」</text>
+							</view>
+							<view class="list-middle-right">
+								<text>详情</text>
+							</view>
 
 						</view>
 						<view class="list-footer">
@@ -294,6 +298,7 @@
 					font-size: 30rpx;
 					
 					.list-head,
+					.list-middle,
 					.list-footer {
 						display: flex;
 						justify-content: space-between;
@@ -307,6 +312,12 @@
 								font-size: 35rpx;
 								color: $highlight;
 							}
+						}
+						.list-middle-right{
+							color: #ddd;
+							padding: 0 20rpx;
+							border: 1px solid #fff;
+							border-radius: 30rpx;
 						}
 
 					}
@@ -346,6 +357,9 @@
 				background: none;
 				color: #fff;
 				text-align: center;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				
 			}
 			button::after {
