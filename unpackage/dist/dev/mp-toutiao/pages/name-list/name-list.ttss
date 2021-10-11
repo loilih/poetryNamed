@@ -69,6 +69,9 @@ page {
   font-size: 35rpx;
   color: #FF4500;
 }
+.name-list .scroll .scroll-list .list-item .list-middle .list-middle-left {
+  flex: 1;
+}
 .name-list .scroll .scroll-list .list-item .list-middle .list-middle-right {
   color: #ddd;
   padding: 0 20rpx;

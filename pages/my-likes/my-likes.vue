@@ -67,7 +67,7 @@
 			toDetail(index){
 				let dataList = JSON.stringify(this.likes[index])
 				uni.navigateTo({
-					url:'../name-detail/name-detail?data='+dataList+'&type=qiming'
+					url:'../name-detail/name-detail?data='+dataList+'&type=qiming&date=null'
 				})
 			}
 		}

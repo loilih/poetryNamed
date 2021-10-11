@@ -1,0 +1,1 @@
+.my .my-head{width:100%;height:15%;background-color:#007aff}.my .my-content{padding:30rpx;background-color:#fff}.my .my-content .my-content-item{display:flex;justify-content:space-between;border-bottom:1px solid #ddd;padding:10rpx}.my .my-content .my-content-item text{margin:0 10rpx}

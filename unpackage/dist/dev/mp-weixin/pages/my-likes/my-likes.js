@@ -225,7 +225,7 @@ var _default =
     toDetail: function toDetail(index) {
       var dataList = JSON.stringify(this.likes[index]);
       uni.navigateTo({
-        url: '../name-detail/name-detail?data=' + dataList + '&type=qiming' });
+        url: '../name-detail/name-detail?data=' + dataList + '&type=qiming&date=null' });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 19)["default"]))

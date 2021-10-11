@@ -35,17 +35,18 @@
 		},
 		onLoad(option) {
 			this.dataList = JSON.parse(option.data)
-			this.date = JSON.parse(option.date)
+			// console.log(this.dataList)
+			// this.date = JSON.parse(option.date)
 			this.type = option.type
 			this.sanCai = this.dataList.sanCaiWuGe.sanCai.sancai.split('')
 			if(option.type === 'qiming'){
 				this.contentArray = this.dataList.completeContent.split("。")
 				this.contentArray.pop()
 			}
-			if(this.date.date != null){
-				this.getBirthEight()
-			}
-			console.log(this.birthEight)
+			// if(this.date.date != null){
+			// 	this.getBirthEight()
+			// }
+			
 		},
 		methods: {
 			goBack() {
@@ -65,7 +66,7 @@
 					},
 					success: (res) => {
 						this.birthEight = res.result.data
-						console.log(this.birthEight)
+						
 						uni.hideLoading()
 					},
 					fail: (err) => {

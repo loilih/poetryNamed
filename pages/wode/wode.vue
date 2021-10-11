@@ -110,7 +110,7 @@
 				}
 				button::after {
 					border-radius: 50rpx;
-					border: 2px solid #007AFF;
+					border: 2px solid $bace-color;
 				}
 			}
 			

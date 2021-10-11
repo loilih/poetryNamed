@@ -33,6 +33,6 @@
   flex: 1;
 }
 .name-detail-swiper .swiper {
-  height: calc(100vh - 650rpx);
+  height: calc(100vh - 750rpx);
 }
 

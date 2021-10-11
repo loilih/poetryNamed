@@ -313,6 +313,9 @@
 								color: $highlight;
 							}
 						}
+						.list-middle-left{
+							flex: 1;
+						}
 						.list-middle-right{
 							color: #ddd;
 							padding: 0 20rpx;

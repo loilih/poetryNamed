@@ -58,6 +58,6 @@
 }
 .wode-content .wode-content-item .wode-content-item-right button::after {
   border-radius: 50rpx;
-  border: 2px solid #007AFF;
+  border: 2px solid #519a73;
 }
 

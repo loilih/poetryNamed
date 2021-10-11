@@ -1,0 +1,1 @@
+page{height:100%;display:flex}.name-detail{display:flex;flex-direction:column;flex:1}

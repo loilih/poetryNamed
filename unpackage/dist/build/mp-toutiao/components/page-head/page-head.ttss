@@ -1,0 +1,1 @@
+.page-head{width:100%;position:relative}.page-head image{width:100%;height:100%}.page-head .page-title{position:absolute;top:10%;left:30rpx}.page-head .page-title text{font-size:50rpx;font-weight:700;opacity:.5}
